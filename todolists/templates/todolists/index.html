@@ -46,10 +46,15 @@
              <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>DELETE ALL ITEM</a>
 
             <ul class="collection">
-                <li class="collection-item completed">Study Python OOP</li>
-                <li class="collection-item">Study Javascript</li>
-                <li class="collection-item">Study James</li>
-                <li class="collection-item">Write an article</li>
+
+                {% for todolist in todo_items %}
+                    {% if todolist.completed %}
+                    <li class="collection-item ">{{todolist.text}}</li>
+                    {% else %}
+                    <a href="#"><li class="collection-item">{{todolist.text}}</li></a>
+                    {% endif %}
+                {% endfor %}
+              
             </ul>
         
         </div>
