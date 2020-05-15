@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'todolists/css/materialize.min.css' %}"  media="screen,projection"/>
+        
+      <!--link to customized style sheet-->
+      <link type="text/css" rel="stylesheet" href="{% static 'todolists/style.css' %}" />
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <div class="body_content container">
+            
+            <div class="card-panel teal lighten-2">
+                <h2 class="center-align"> What are you to do today</h2>
+            </div>
+
+            <div class="row">
+
+                <form class="col s12">
+
+                    <div class="row">
+
+                        <div class="input-field col s6">
+                            <input id="list_item" type="text" class="validate">
+                            <label for="list_item">Enter item</label>
+                            <span> <a class="waves-effect waves-light btn">ADD ITEM</a>
+                            </span>
+                       
+                        </div>
+                      
+                    </div>
+
+                </form>
+
+            </div>
+            
+             <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>DELETE COMPLETED</a>
+             <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>DELETE ALL ITEM</a>
+
+            <ul class="collection">
+                <li class="collection-item completed">Study Python OOP</li>
+                <li class="collection-item">Study Javascript</li>
+                <li class="collection-item">Study James</li>
+                <li class="collection-item">Write an article</li>
+            </ul>
+        
+        </div>
+        
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="{% static 'todolists/todolist.js' %}"></script>
+
+    </body>
+  </html>
